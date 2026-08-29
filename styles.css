@@ -773,6 +773,16 @@ body {
   color: var(--ink);
   margin-bottom: 6px;
 }
+.timeline-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: all 0.3s;
+}
+.timeline-title a:hover {
+  color: var(--jade);
+  border-bottom-color: var(--jade-light);
+}
 
 .timeline-school {
   font-size: 15px;
