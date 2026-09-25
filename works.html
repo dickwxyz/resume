@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>成果展示 | 钱晨 讲师</title>
+    <meta
+      name="description"
+      content="钱晨的智能体成果展示：申通调度规章智能助手、调车作业计划智能体等已上线系统。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 背景装饰 -->
+    <div class="bg-canvas" id="bgCanvas"></div>
+    <div class="bg-particles">
+      <span class="particle p1"></span>
+      <span class="particle p2"></span>
+      <span class="particle p3"></span>
+      <span class="particle p4"></span>
+      <span class="particle p5"></span>
+    </div>
+
+    <!-- 导航（跨页链接指回首页各锚点；本页不设 active） -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html#home" class="brand">
+          <span class="brand-seal">钱</span>
+          <span class="brand-name">钱晨</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#home">首页</a></li>
+          <li><a href="index.html#about">个人简介</a></li>
+          <li><a href="index.html#projects">科研项目</a></li>
+          <li><a href="index.html#research">研究方向</a></li>
+          <li><a href="index.html#publications">学术成果</a></li>
+          <li><a href="index.html#courses">教授课程</a></li>
+          <li><a href="index.html#awards">荣誉奖项</a></li>
+          <li><a href="index.html#contact">联系方式</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 页头 -->
+    <section class="works-hero">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Deliverables</span>
+          <h1 class="section-title">成果展示</h1>
+          <div class="title-accent">
+            <span class="accent-line"></span>
+            <span class="accent-diamond"></span>
+            <span class="accent-line"></span>
+          </div>
+          <p class="section-subtitle">
+            研究方向的落地实现 —— 把数据与知识融合的方法，做成可在线使用的系统
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <!-- 成果列表 -->
+    <main class="section works-list">
+      <div class="container">
+        <!-- 成果 1 -->
+        <article id="dispatch" class="work-card hover-card">
+          <div class="work-body">
+            <span class="work-status work-status-live">已上线</span>
+            <h3 class="work-title">申通调度规章智能助手</h3>
+            <p class="work-sub">
+              基于 Graphify 知识图谱与 RAG 双引擎的轨道交通调度规章全生命周期智能体，面向上海地铁调度作业场景。
+            </p>
+            <ul class="work-features">
+              <li>415 篇调度规章、59 篇上位标准图谱化为 2250 节点知识网络</li>
+              <li>覆盖智能问答、规章校验、规章优化、培训辅助四大模块</li>
+              <li>全部模型本地部署，实现应急分钟级检索与跨层冲突自动校验</li>
+            </ul>
+            <div class="work-tags">
+              <span>Graphify 知识图谱</span><span>RAG 检索增强生成</span>
+              <span>本地部署</span><span>全生命周期</span>
+            </div>
+            <div class="work-actions">
+              <a
+                class="work-cta"
+                href="https://dickwxyz.github.io/Dispatch-Assistant-Preview/"
+                target="_blank"
+                rel="noopener"
+                >静态预览 ↗</a
+              >
+            </div>
+          </div>
+          <div class="work-cover work-cover-jade">
+            <!-- <span class="work-cover-fallback">🗂️</span> -->
+            <!-- 有截图后：取消下一行注释，并把 pic/works/dispatch.jpg 换成实际文件 -->
+            <img src="pic/works/调度规章智能助手.png" alt="申通调度规章智能助手界面" />
+          </div>
+        </article>
+
+        <!-- 成果 2 -->
+        <article id="shunting" class="work-card hover-card">
+          <div class="work-body">
+            <span class="work-status work-status-live">已上线</span>
+            <h3 class="work-title">调车作业计划智能体</h3>
+            <p class="work-sub">
+              面向铁路行车组织的调车作业计划智能体，配套《铁路行车组织》"AI+课程"建设，服务"人机协同"教学场景。
+            </p>
+            <ul class="work-features">
+              <li>面向调车作业计划编制，将大模型作为知识助教与评议伙伴融入教学全过程</li>
+              <li>依托课程教材知识库，支持调车作业原理的问答、推演与方案比选</li>
+              <li>探索专业课程从传统讲授向"人机协同"模式的数字化转型路径</li>
+            </ul>
+            <div class="work-tags">
+              <span>大语言模型</span><span>AI+课程</span>
+              <span>人机协同</span><span>调车作业计划</span>
+            </div>
+            <div class="work-actions">
+              <a
+                class="work-cta"
+                href="https://app-3rv9.pocketbay.app/"
+                target="_blank"
+                rel="noopener"
+                >在线体验 ↗</a
+              >
+            </div>
+          </div>
+          <div class="work-cover work-cover-azure">
+            <!-- <span class="work-cover-fallback">🚃</span> -->
+            <!-- 有截图后：取消下一行注释，并把 pic/works/shunting.jpg 换成实际文件 -->
+            <img src="pic/works/调车作业计划智能体.png" alt="调车作业计划智能体界面" />
+          </div>
+        </article>
+
+        <div class="works-back">
+          <a class="works-more" href="index.html#projects">← 返回科研项目</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="brand-seal">钱</div>
+            <div>
+              <p class="footer-name">钱晨 讲师</p>
+              <p class="footer-sub">上海应用技术大学 · 智能技术学部</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2026 Qian Chen · All Rights Reserved · 本页面最后更新：2026年9月
+          </p>
+          <p class="footer-motif">
+            将科研写在祖国大地上，将知识传递给每一位学生。
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 返回顶部 -->
+    <button class="back-top" id="backTop" aria-label="回到顶部">
+      <span class="bt-arrow">↑</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
