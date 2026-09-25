@@ -1098,7 +1098,8 @@ body {
   font-weight: 500;
 }
 
-.courses-subtitle {
+.courses-subtitle,
+.works-subtitle {
   font-family: var(--serif);
   font-size: 22px;
   font-weight: 700;
@@ -1107,7 +1108,8 @@ body {
   letter-spacing: 2px;
   margin: 60px 0 26px;
 }
-.courses-subtitle::after {
+.courses-subtitle::after,
+.works-subtitle::after {
   content: '';
   display: block;
   width: 60px;
@@ -1697,6 +1699,7 @@ body {
   margin-bottom: 14px;
 }
 .work-status-live { background: var(--jade-soft); color: var(--jade); }
+.work-status-open { background: var(--azure-soft); color: var(--azure); }
 .work-status-building { background: var(--gold-soft); color: #6e5930; }
 
 .work-title {
@@ -1784,14 +1787,11 @@ body {
   pointer-events: none;
 }
 
-/* 封面块：设计款底衬 + 预留截图位（img 存在时铺满） */
+/* 封面块：有截图时按原图比例完整显示（绝不裁切），无截图时由 fallback 撑出 4:3 占位 */
 .work-cover {
   position: relative;
-  aspect-ratio: 4 / 3;
   border-radius: 16px;
   overflow: hidden;
-  display: grid;
-  place-items: center;
   background: var(--gradient-ink);
 }
 .work-cover-jade { background: linear-gradient(135deg, #4a8c7c 0%, #2c554b 100%); }
@@ -1803,15 +1803,41 @@ body {
   background: radial-gradient(circle at 30% 25%, rgba(201, 169, 97, 0.3), transparent 62%);
   pointer-events: none;
 }
-.work-cover img {
+/* 点击封面在新标签打开原图（列宽只有 320px，细节需看大图） */
+.work-cover-link {
+  display: block;
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  cursor: zoom-in;
+}
+.work-cover-link img { transition: transform 0.4s ease; }
+.work-cover-link:hover img { transform: scale(1.02); }
+.work-cover-link::after {
+  content: '查看原图 ↗';
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 100px;
+  background: rgba(31, 45, 61, 0.72);
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.work-cover-link:hover::after { opacity: 1; }
+.work-cover img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .work-cover-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   position: relative;
   z-index: 1;
   font-size: 68px;

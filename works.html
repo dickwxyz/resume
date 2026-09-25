@@ -98,8 +98,17 @@
           </div>
           <div class="work-cover work-cover-jade">
             <!-- <span class="work-cover-fallback">🗂️</span> -->
-            <!-- 有截图后：取消下一行注释，并把 pic/works/dispatch.jpg 换成实际文件 -->
-            <img src="pic/works/调度规章智能助手.png" alt="申通调度规章智能助手界面" />
+            <a
+              class="work-cover-link"
+              href="pic/works/调度规章智能助手.png"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="pic/works/调度规章智能助手.png"
+                alt="申通调度规章智能助手界面"
+              />
+            </a>
           </div>
         </article>
 
@@ -132,8 +141,83 @@
           </div>
           <div class="work-cover work-cover-azure">
             <!-- <span class="work-cover-fallback">🚃</span> -->
-            <!-- 有截图后：取消下一行注释，并把 pic/works/shunting.jpg 换成实际文件 -->
-            <img src="pic/works/调车作业计划智能体.png" alt="调车作业计划智能体界面" />
+            <a
+              class="work-cover-link"
+              href="pic/works/调车作业计划智能体.png"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="pic/works/调车作业计划智能体.png"
+                alt="调车作业计划智能体界面"
+              />
+            </a>
+          </div>
+        </article>
+
+        <!-- 自研工具箱 -->
+        <h3 class="works-subtitle">自研工具箱</h3>
+
+        <article id="coordconv" class="work-card hover-card">
+          <div class="work-body">
+            <span class="work-status work-status-open">已开源</span>
+            <h3 class="work-title">坐标转换函数库</h3>
+            <p class="work-sub">
+              自研 Python 坐标转换函数库，实现大地坐标系、火星坐标系、百度经纬度坐标系与百度墨卡托米制坐标系之间的互转，无需地图API，转换速度极快。
+            </p>
+            <ul class="work-features">
+              <li>
+                覆盖 WGS84 / GCJ-02 / BD09LL / BD09MC 四类坐标系互转，共 13 个公开函数
+              </li>
+              <li>
+                附球面距离计算与时间戳↔字符串时刻互转，无需第三方依赖，放入项目即可 import 调用
+              </li>
+              <li>配套测试脚本 32 例通过，并附测试报告说明已知边界限制</li>
+            </ul>
+            <div class="work-tags">
+              <span>Python</span><span>坐标转换</span>
+              <span>纯标准库</span><span>可复用</span>
+            </div>
+            <div class="work-actions">
+              <a
+                class="work-cta"
+                href="https://github.com/dickwxyz/CoordinatesConverter"
+                target="_blank"
+                rel="noopener"
+                >查看源码 ↗</a
+              >
+            </div>
+          </div>
+          <div class="work-cover">
+            <a
+              class="work-cover-link"
+              href="pic/works/坐标互转示意图.png"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="pic/works/坐标互转示意图.png" alt="坐标互转示意图" />
+            </a>
+          </div>
+        </article>
+
+        <article id="more-tools" class="work-card hover-card">
+          <div class="work-body">
+            <span class="work-status work-status-building">建设中</span>
+            <h3 class="work-title">更多工具筹备中</h3>
+            <p class="work-sub">
+              以下自研工具正在开发中，上线后将在本页补充详细介绍。
+            </p>
+            <ul class="work-features">
+              <li>遗忘的坚果 · 个人知识库系统</li>
+              <li>科研管理系统</li>
+              <li>生活管理小程序</li>
+            </ul>
+            <div class="work-actions">
+              <span class="work-cta work-cta-disabled">建设中</span>
+            </div>
+          </div>
+          <div class="work-cover">
+            <span class="work-cover-fallback">🧰</span>
           </div>
         </article>
 
